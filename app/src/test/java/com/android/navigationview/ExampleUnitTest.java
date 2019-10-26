@@ -1,4 +1,4 @@
-package com.android.navigation;
+package com.android.navigationview;
 
 import org.junit.Test;
 

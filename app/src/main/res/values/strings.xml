@@ -1,16 +1,7 @@
 <resources>
-    <string name="app_name">Navigation</string>
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="agrieenculture_greenhouse">Agrieenculture Greenhouse</string>
-    <string name="subtitle">agrieenculture_greenhouse@gmail.com</string>
-    <string name="nav_header_desc">Navigation header</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">NavigationView</string>
 
-    <string name="home">Home</string>
-    <string name="flowering_plants">Flower Plants</string>
-    <string name="fruit_plants">Fruit Plants</string>
-    <string name="cactus_succulent">Cactus - Succulent</string>
-    <string name="location">Our Locations</string>
-    <string name="contact_us">Contact Us</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>;
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 </resources>
+
