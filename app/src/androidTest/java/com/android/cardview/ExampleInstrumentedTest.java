@@ -1,4 +1,4 @@
-package com.android.navigationview;
+package com.android.cardview;
 
 import android.content.Context;
 
@@ -22,6 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
 
-        assertEquals("com.android.navigationview", appContext.getPackageName());
+        assertEquals("com.android.cardview", appContext.getPackageName());
     }
 }

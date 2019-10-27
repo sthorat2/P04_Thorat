@@ -1,4 +1,4 @@
-package com.android.navigationview;
+package com.android.cardview;
 
 import org.junit.Test;
 

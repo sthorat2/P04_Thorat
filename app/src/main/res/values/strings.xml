@@ -1,7 +1,3 @@
 <resources>
-    <string name="app_name">NavigationView</string>
-
-    <string name="navigation_drawer_open">Open navigation drawer</string>;
-    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="app_name">CardView</string>
 </resources>
-
