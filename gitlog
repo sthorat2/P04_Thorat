@@ -1,0 +1,290 @@
+D:\AndroidDev\P04_Thorat>git log --stat
+commit 9df3afd9f11322fcf3638d227fbd499c7b6fecb3 (HEAD -> master, origin/master, origin/HEAD)
+Author: Shrutika Thorat <sthorat2@binghamton.edu>
+Date:   Sun Oct 27 22:33:08 2019 -0400
+
+    Update
+
+    Added CardViews for Fruit,Flower,Cactus and TableView for Grass and Climbers
+
+ app/src/main/AndroidManifest.xml                   |   2 +-
+ .../{Climbers.java => ClimbersActivity.java}       |   2 +-
+ .../java/com/android/cardview/MainActivity.java    |   4 +-
+ .../main/java/com/android/cardview/MyAdapter.java  |  24 ++-
+ app/src/main/res/drawable/bougainvillea.jpg        | Bin 0 -> 75324 bytes
+ app/src/main/res/drawable/cac1.jpg                 | Bin 0 -> 6943 bytes
+ app/src/main/res/drawable/cac2.jpg                 | Bin 0 -> 6514 bytes
+ app/src/main/res/drawable/cac3.jpg                 | Bin 0 -> 6533 bytes
+ app/src/main/res/drawable/cac4.jpg                 | Bin 0 -> 9796 bytes
+ app/src/main/res/drawable/californiagold.jpg       | Bin 0 -> 81930 bytes
+ app/src/main/res/drawable/chinesetrumpet.jpg       | Bin 0 -> 67819 bytes
+ app/src/main/res/drawable/chocolate_vine.jpg       | Bin 0 -> 60512 bytes
+ app/src/main/res/drawable/coral_plant.jpg          | Bin 0 -> 95577 bytes
+ app/src/main/res/drawable/feather_reed_grass.jpg   | Bin 0 -> 53990 bytes
+ app/src/main/res/drawable/foxtail_grass.jpg        | Bin 0 -> 117168 bytes
+ app/src/main/res/drawable/hakone_grass.jpg         | Bin 0 -> 63437 bytes
+ app/src/main/res/drawable/himalaya_fairy_grass.jpg | Bin 0 -> 96671 bytes
+ app/src/main/res/drawable/orange.jpg               | Bin 0 -> 17698 bytes
+ app/src/main/res/drawable/pampas_grass.jpg         | Bin 0 -> 128242 bytes
+ app/src/main/res/drawable/pear.jpg                 | Bin 0 -> 11385 bytes
+ app/src/main/res/drawable/rass.jpg                 | Bin 0 -> 12428 bytes
+ app/src/main/res/drawable/red_tussock_grass.jpg    | Bin 0 -> 124150 bytes
+ app/src/main/res/drawable/straw.jpg                | Bin 0 -> 49898 bytes
+ app/src/main/res/layout/activity_cactus.xml        | 195 ++++++++++++++++++-
+ app/src/main/res/layout/activity_climbers.xml      | 190 +++++++++++++++++-
+ app/src/main/res/layout/activity_flower.xml        |   3 +-
+ app/src/main/res/layout/activity_fruit.xml         | 194 ++++++++++++++++++-
+ app/src/main/res/layout/activity_grass.xml         | 213 ++++++++++++++++++++-
+ 28 files changed, 808 insertions(+), 19 deletions(-)
+
+commit 8f027cafb3b80f13d515cd9c3425317a1a3ea167
+Author: Shrutika Thorat <sthorat2@binghamton.edu>
+Date:   Sun Oct 27 19:55:33 2019 -0400
+
+    Update
+
+    Changed my Navigation View to Card View.
+    Faced several issues with Navigation View-Fragments.
+    Home Page has Cardview for types of plants
+    Each card view opens up new activity for each section which is either a card view or a table view
+    Scrollbar is implemented on  home page.
+
+ app/build.gradle                                   |  12 +-
+ .../ExampleInstrumentedTest.java                   |   4 +-
+ app/src/main/AndroidManifest.xml                   |  12 +-
+ .../java/com/android/cardview/CactusActivity.java  |  14 ++
+ .../main/java/com/android/cardview/Climbers.java   |  14 ++
+ .../java/com/android/cardview/FlowerActivity.java  |  23 ++
+ .../java/com/android/cardview/FruitActivity.java   |  14 ++
+ .../java/com/android/cardview/GrassActivity.java   |  14 ++
+ .../com/android/cardview/ItemClickListener.java    |  11 +
+ .../java/com/android/cardview/MainActivity.java    |  71 ++++++
+ app/src/main/java/com/android/cardview/Model.java  |  31 +++
+ .../main/java/com/android/cardview/MyAdapter.java  |  61 +++++
+ .../main/java/com/android/cardview/MyHolder.java   |  37 +++
+ .../com/android/navigationview/CactusFragment.java |  19 --
+ .../com/android/navigationview/FlowerFragment.java |  19 --
+ .../com/android/navigationview/FruitFragment.java  |  19 --
+ .../com/android/navigationview/HomeFragment.java   |  19 --
+ .../com/android/navigationview/MainActivity.java   |  84 -------
+ app/src/main/res/drawable-v24/cactus.png           | Bin 17832 -> 0 bytes
+ app/src/main/res/drawable-v24/contact_phone.png    | Bin 393 -> 0 bytes
+ app/src/main/res/drawable-v24/contus.png           | Bin 3233 -> 0 bytes
+ app/src/main/res/drawable-v24/home.png             | Bin 208 -> 0 bytes
+ app/src/main/res/drawable-v24/local_florist.png    | Bin 504 -> 0 bytes
+ app/src/main/res/drawable-v24/logo.png             | Bin 7981 -> 0 bytes
+ app/src/main/res/drawable-v24/my_location.png      | Bin 508 -> 0 bytes
+ app/src/main/res/drawable-v24/nature.png           | Bin 430 -> 0 bytes
+ app/src/main/res/drawable-v24/tree.png             | Bin 285 -> 0 bytes
+ app/src/main/res/drawable/cactus.jpg               | Bin 0 -> 16316 bytes
+ app/src/main/res/drawable/climbers.jpg             | Bin 0 -> 46573 bytes
+ app/src/main/res/drawable/engrose.jpg              | Bin 0 -> 177388 bytes
+ app/src/main/res/drawable/flower.jpg               | Bin 0 -> 16763 bytes
+ app/src/main/res/drawable/fruit.jpg                | Bin 0 -> 15052 bytes
+ app/src/main/res/drawable/grass.jpg                | Bin 0 -> 9790 bytes
+ app/src/main/res/drawable/orangeroses.jpg          | Bin 0 -> 146799 bytes
+ app/src/main/res/drawable/pinktulip.jpg            | Bin 0 -> 107104 bytes
+ app/src/main/res/drawable/ramblerrose.jpg          | Bin 0 -> 95113 bytes
+ app/src/main/res/drawable/redroses.jpg             | Bin 0 -> 168495 bytes
+ app/src/main/res/drawable/redtulip.jpg             | Bin 0 -> 129809 bytes
+ app/src/main/res/layout/activity_cactus.xml        |   9 +
+ app/src/main/res/layout/activity_climbers.xml      |   9 +
+ app/src/main/res/layout/activity_flower.xml        | 270 +++++++++++++++++++++
+ app/src/main/res/layout/activity_fruit.xml         |   9 +
+ app/src/main/res/layout/activity_grass.xml         |   9 +
+ app/src/main/res/layout/activity_main.xml          |  43 +---
+ app/src/main/res/layout/fragment_cac_suc.xml       |  14 --
+ app/src/main/res/layout/fragment_flower.xml        |  14 --
+ app/src/main/res/layout/fragment_fruit.xml         |  14 --
+ app/src/main/res/layout/fragment_home.xml          |  14 --
+ app/src/main/res/layout/model.xml                  |  38 +++
+ app/src/main/res/layout/nav_header.xml             |  33 ---
+ app/src/main/res/menu/drawer_menu.xml              |  41 ----
+ app/src/main/res/values-v21/styles.xml             |  10 -
+ app/src/main/res/values/strings.xml                |   6 +-
+ app/src/main/res/values/styles.xml                 |   8 -
+ .../ExampleUnitTest.java                           |   2 +-
+ gradle/wrapper/gradle-wrapper.properties           |   2 +-
+ settings.gradle                                    |   2 +-
+ 57 files changed, 664 insertions(+), 361 deletions(-)
+
+commit 8daf4857ca6039b7f6a4541bfb2593d7694f6212
+Author: Shrutika Thorat <sthorat2@binghamton.edu>
+Date:   Sat Oct 26 02:05:04 2019 -0400
+
+    Update
+
+    Resolved some issues with  navigation drawer and made the navigation drawer more flexible
+    Created fragments for all the drawers in navigation bar
+
+ app/build.gradle                                   |   7 +-
+ .../ExampleInstrumentedTest.java                   |   4 +-
+ app/src/main/AndroidManifest.xml                   |   6 +-
+ .../java/com/android/navigation/MainActivity.java  |  69 -----------------
+ .../navigation/ui/gallery/GalleryFragment.java     |  35 ---------
+ .../navigation/ui/gallery/GalleryViewModel.java    |  19 -----
+ .../android/navigation/ui/home/HomeFragment.java   |  35 ---------
+ .../android/navigation/ui/home/HomeViewModel.java  |  19 -----
+ .../android/navigation/ui/send/SendFragment.java   |  35 ---------
+ .../android/navigation/ui/send/SendViewModel.java  |  19 -----
+ .../android/navigation/ui/share/ShareFragment.java |  35 ---------
+ .../navigation/ui/share/ShareViewModel.java        |  19 -----
+ .../navigation/ui/slideshow/SlideshowFragment.java |  35 ---------
+ .../ui/slideshow/SlideshowViewModel.java           |  19 -----
+ .../android/navigation/ui/tools/ToolsFragment.java |  35 ---------
+ .../navigation/ui/tools/ToolsViewModel.java        |  19 -----
+ .../com/android/navigationview/CactusFragment.java |  19 +++++
+ .../com/android/navigationview/FlowerFragment.java |  19 +++++
+ .../com/android/navigationview/FruitFragment.java  |  19 +++++
+ .../com/android/navigationview/HomeFragment.java   |  19 +++++
+ .../com/android/navigationview/MainActivity.java   |  84 +++++++++++++++++++++
+ app/src/main/res/drawable-v21/ic_menu_camera.xml   |  12 ---
+ app/src/main/res/drawable-v21/ic_menu_gallery.xml  |   9 ---
+ app/src/main/res/drawable-v21/ic_menu_manage.xml   |   9 ---
+ app/src/main/res/drawable-v21/ic_menu_send.xml     |   9 ---
+ app/src/main/res/drawable-v21/ic_menu_share.xml    |   9 ---
+ .../main/res/drawable-v21/ic_menu_slideshow.xml    |   9 ---
+ .../main/res/{drawable => drawable-v24}/cactus.png | Bin
+ .../{drawable => drawable-v24}/contact_phone.png   | Bin
+ .../main/res/{drawable => drawable-v24}/contus.png | Bin
+ .../main/res/{drawable => drawable-v24}/home.png   | Bin
+ .../{drawable => drawable-v24}/local_florist.png   | Bin
+ .../main/res/{drawable => drawable-v24}/logo.png   | Bin
+ .../res/{drawable => drawable-v24}/my_location.png | Bin
+ .../main/res/{drawable => drawable-v24}/nature.png | Bin
+ .../main/res/{drawable => drawable-v24}/tree.png   | Bin
+ app/src/main/res/drawable/cac.png                  | Bin 10467 -> 0 bytes
+ app/src/main/res/drawable/download.jpg             | Bin 4057 -> 0 bytes
+ app/src/main/res/drawable/mylogo1.png              | Bin 337642 -> 0 bytes
+ app/src/main/res/drawable/side_nav_bar.xml         |   9 ---
+ app/src/main/res/layout/activity_main.xml          |  48 ++++++++----
+ app/src/main/res/layout/app_bar_main.xml           |  33 --------
+ app/src/main/res/layout/content_main.xml           |  20 -----
+ app/src/main/res/layout/fragment_cac_suc.xml       |  14 ++++
+ .../main/res/layout/fragment_cactus_succulent.xml  |  19 -----
+ app/src/main/res/layout/fragment_contact_us.xml    |  19 -----
+ app/src/main/res/layout/fragment_flower.xml        |  14 ++++
+ .../main/res/layout/fragment_flowering_plants.xml  |  19 -----
+ app/src/main/res/layout/fragment_fruit.xml         |  14 ++++
+ app/src/main/res/layout/fragment_fruit_plants.xml  |  19 -----
+ app/src/main/res/layout/fragment_home.xml          |  23 +++---
+ app/src/main/res/layout/fragment_location.xml      |  19 -----
+ .../layout/{nav_header_main.xml => nav_header.xml} |  22 ++----
+ app/src/main/res/menu/activity_main_drawer.xml     |  41 ----------
+ app/src/main/res/menu/drawer_menu.xml              |  41 ++++++++++
+ app/src/main/res/menu/main.xml                     |   9 ---
+ app/src/main/res/navigation/mobile_navigation.xml  |  43 -----------
+ app/src/main/res/values-v21/styles.xml             |   6 +-
+ app/src/main/res/values/dimens.xml                 |   8 --
+ app/src/main/res/values/drawables.xml              |   8 --
+ app/src/main/res/values/strings.xml                |  17 +----
+ app/src/main/res/values/styles.xml                 |   9 +--
+ .../ExampleUnitTest.java                           |   2 +-
+ gradle/wrapper/gradle-wrapper.properties           |   2 +-
+ settings.gradle                                    |   2 +-
+ 65 files changed, 314 insertions(+), 793 deletions(-)
+
+commit 6714ed16253ab59dab9352553599b93b9bb53c17
+Author: Shrutika Thorat <sthorat2@binghamton.edu>
+Date:   Thu Oct 24 02:08:10 2019 -0400
+
+    Update
+
+    Project crashed several times.
+    Created a Navigation bar for navigating through project.
+    Created logo for my project which is for selling plants online
+    The navigation drawer has items like fruit tree,flower tree cactus-succulent ,contact us and location
+
+ .gitignore                                         |  14 ++
+ .idea/codeStyles/Project.xml                       | 116 ++++++++++++++
+ .idea/gradle.xml                                   |  16 ++
+ .idea/misc.xml                                     |   9 ++
+ .idea/runConfigurations.xml                        |  12 ++
+ app/.gitignore                                     |   1 +
+ app/build.gradle                                   |  33 ++++
+ app/proguard-rules.pro                             |  21 +++
+ .../navigation/ExampleInstrumentedTest.java        |  27 ++++
+ app/src/main/AndroidManifest.xml                   |  24 +++
+ .../java/com/android/navigation/MainActivity.java  |  69 +++++++++
+ .../navigation/ui/gallery/GalleryFragment.java     |  35 +++++
+ .../navigation/ui/gallery/GalleryViewModel.java    |  19 +++
+ .../android/navigation/ui/home/HomeFragment.java   |  35 +++++
+ .../android/navigation/ui/home/HomeViewModel.java  |  19 +++
+ .../android/navigation/ui/send/SendFragment.java   |  35 +++++
+ .../android/navigation/ui/send/SendViewModel.java  |  19 +++
+ .../android/navigation/ui/share/ShareFragment.java |  35 +++++
+ .../navigation/ui/share/ShareViewModel.java        |  19 +++
+ .../navigation/ui/slideshow/SlideshowFragment.java |  35 +++++
+ .../ui/slideshow/SlideshowViewModel.java           |  19 +++
+ .../android/navigation/ui/tools/ToolsFragment.java |  35 +++++
+ .../navigation/ui/tools/ToolsViewModel.java        |  19 +++
+ app/src/main/res/drawable-v21/ic_menu_camera.xml   |  12 ++
+ app/src/main/res/drawable-v21/ic_menu_gallery.xml  |   9 ++
+ app/src/main/res/drawable-v21/ic_menu_manage.xml   |   9 ++
+ app/src/main/res/drawable-v21/ic_menu_send.xml     |   9 ++
+ app/src/main/res/drawable-v21/ic_menu_share.xml    |   9 ++
+ .../main/res/drawable-v21/ic_menu_slideshow.xml    |   9 ++
+ .../res/drawable-v24/ic_launcher_foreground.xml    |  34 ++++
+ app/src/main/res/drawable/cac.png                  | Bin 0 -> 10467 bytes
+ app/src/main/res/drawable/cactus.png               | Bin 0 -> 17832 bytes
+ app/src/main/res/drawable/contact_phone.png        | Bin 0 -> 393 bytes
+ app/src/main/res/drawable/contus.png               | Bin 0 -> 3233 bytes
+ app/src/main/res/drawable/download.jpg             | Bin 0 -> 4057 bytes
+ app/src/main/res/drawable/home.png                 | Bin 0 -> 208 bytes
+ .../main/res/drawable/ic_launcher_background.xml   | 170 ++++++++++++++++++++
+ app/src/main/res/drawable/local_florist.png        | Bin 0 -> 504 bytes
+ app/src/main/res/drawable/logo.png                 | Bin 0 -> 7981 bytes
+ app/src/main/res/drawable/my_location.png          | Bin 0 -> 508 bytes
+ app/src/main/res/drawable/mylogo1.png              | Bin 0 -> 337642 bytes
+ app/src/main/res/drawable/nature.png               | Bin 0 -> 430 bytes
+ app/src/main/res/drawable/side_nav_bar.xml         |   9 ++
+ app/src/main/res/drawable/tree.png                 | Bin 0 -> 285 bytes
+ app/src/main/res/layout/activity_main.xml          |  25 +++
+ app/src/main/res/layout/app_bar_main.xml           |  33 ++++
+ app/src/main/res/layout/content_main.xml           |  20 +++
+ .../main/res/layout/fragment_cactus_succulent.xml  |  19 +++
+ app/src/main/res/layout/fragment_contact_us.xml    |  19 +++
+ .../main/res/layout/fragment_flowering_plants.xml  |  19 +++
+ app/src/main/res/layout/fragment_fruit_plants.xml  |  19 +++
+ app/src/main/res/layout/fragment_home.xml          |  19 +++
+ app/src/main/res/layout/fragment_location.xml      |  19 +++
+ app/src/main/res/layout/nav_header_main.xml        |  39 +++++
+ app/src/main/res/menu/activity_main_drawer.xml     |  41 +++++
+ app/src/main/res/menu/main.xml                     |   9 ++
+ app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml |   5 +
+ .../res/mipmap-anydpi-v26/ic_launcher_round.xml    |   5 +
+ app/src/main/res/mipmap-hdpi/ic_launcher.png       | Bin 0 -> 2963 bytes
+ app/src/main/res/mipmap-hdpi/ic_launcher_round.png | Bin 0 -> 4905 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher.png       | Bin 0 -> 2060 bytes
+ app/src/main/res/mipmap-mdpi/ic_launcher_round.png | Bin 0 -> 2783 bytes
+ app/src/main/res/mipmap-xhdpi/ic_launcher.png      | Bin 0 -> 4490 bytes
+ .../main/res/mipmap-xhdpi/ic_launcher_round.png    | Bin 0 -> 6895 bytes
+ app/src/main/res/mipmap-xxhdpi/ic_launcher.png     | Bin 0 -> 6387 bytes
+ .../main/res/mipmap-xxhdpi/ic_launcher_round.png   | Bin 0 -> 10413 bytes
+ app/src/main/res/mipmap-xxxhdpi/ic_launcher.png    | Bin 0 -> 9128 bytes
+ .../main/res/mipmap-xxxhdpi/ic_launcher_round.png  | Bin 0 -> 15132 bytes
+ app/src/main/res/navigation/mobile_navigation.xml  |  43 ++++++
+ app/src/main/res/values-v21/styles.xml             |   8 +
+ app/src/main/res/values/colors.xml                 |   6 +
+ app/src/main/res/values/dimens.xml                 |   8 +
+ app/src/main/res/values/drawables.xml              |   8 +
+ app/src/main/res/values/strings.xml                |  16 ++
+ app/src/main/res/values/styles.xml                 |  20 +++
+ .../com/android/navigation/ExampleUnitTest.java    |  17 ++
+ build.gradle                                       |  27 ++++
+ gradle.properties                                  |  20 +++
+ gradle/wrapper/gradle-wrapper.jar                  | Bin 0 -> 54329 bytes
+ gradle/wrapper/gradle-wrapper.properties           |   6 +
+ gradlew                                            | 172 +++++++++++++++++++++
+ gradlew.bat                                        |  84 ++++++++++
+ settings.gradle                                    |   2 +
+ 83 files changed, 1664 insertions(+)
+
+commit d6d050bb413cf91cce02b34d06b0d2853d0a3c1c
+Author: sthorat2 <45091496+sthorat2@users.noreply.github.com>
+Date:   Thu Oct 24 01:55:06 2019 -0400
+
+    Initial commit
+
+ README.md | 2 ++
+ 1 file changed, 2 insertions(+)
