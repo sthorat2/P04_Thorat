@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Climbers"></activity>
+        <activity android:name=".ClimbersActivity"></activity>
         <activity android:name=".GrassActivity" />
         <activity android:name=".CactusActivity" />
         <activity android:name=".FruitActivity" />

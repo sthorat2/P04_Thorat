@@ -61,8 +61,8 @@ public class MainActivity extends AppCompatActivity {
         models.add(p);
 
         p = new Model();
-        p.setTitle("Climbers");
-        p.setDescription("This section has Climbers,Click to go to this section");
+        p.setTitle("ClimbersActivity");
+        p.setDescription("This section has ClimbersActivity,Click to go to this section");
         p.setImg(R.drawable.climbers);
         models.add(p);
 

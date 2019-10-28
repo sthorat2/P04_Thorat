@@ -47,8 +47,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyHolder>{
         holder.setItemClickListener(new ItemClickListener() {
             @Override
             public void onItemClick(View v, int pos) {
-                Intent intent = new Intent(c, FlowerActivity.class);
-                c.startActivity(intent);
+
+                if(models.get(pos).getTitle().equals("Cactus-Succluent")){
+                    Intent intent = new Intent(c, CactusActivity.class);
+                    c.startActivity(intent);
+                }
+                if(models.get(pos).getTitle().equals("Fruit Plants")){
+                    Intent intent = new Intent(c, FruitActivity.class);
+                    c.startActivity(intent);
+                }
+                if(models.get(pos).getTitle().equals("Flower Plants")){
+                    Intent intent = new Intent(c, FlowerActivity.class);
+                    c.startActivity(intent);
+                }
+                if(models.get(pos).getTitle().equals("Ornamental Grass")){
+                    Intent intent = new Intent(c, GrassActivity.class);
+                    c.startActivity(intent);
+                }
+                if(models.get(pos).getTitle().equals("ClimbersActivity")){
+                    Intent intent = new Intent(c, ClimbersActivity.class);
+                    c.startActivity(intent);
+                }
+
 
             }
         });
